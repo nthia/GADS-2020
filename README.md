@@ -25,12 +25,27 @@ Complete of 10-15 selected hands-on labs on Qwiklabs and submitting proof of suc
 #### Create a utility virtual machine
 
 ```console
-  gcloud config set compute/zone us-central1-b
+  gcloud config set compute/zone us-central1-b && 
   gcloud compute instances create "my-vm" \
   --machine-type "n1-standard-1" \
   --image-project "debian-cloud" \
   --image "debian-9-stretch-v20190213" \
   --subnet "default"
+```
+
+#### Create a SQL Instance
+
+```console
+  gcloud sql instances create blog-db \
+  --password="admin" \
+  --sql-version=MYSQL_5_7" \
+  --zone=us-central1-a && 
+  gcloud sql databases create host-db \
+  --instance="blog-db" &&
+  gcloud sql users create blogdbuser \
+  --instance=blog-db -i blog-db \
+  --host='%' \
+  --password='password'
 ```
 
 
