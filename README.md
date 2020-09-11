@@ -21,3 +21,13 @@ Complete of 10-15 selected hands-on labs on Qwiklabs and submitting proof of suc
 ![ss1](https://github.com/nthia/GADS-2020/blob/master/Using%20OAuth.PNG) | ![ss1](https://github.com/nthia/GADS-2020/blob/master/Virtual%20Networking.PNG)
 ### The Cloud challenge parts 2:
 “Translation” of 2-3 selected labs from Console instructions to 100% command line instructions.
+
+#### create a VM instance
+
+  gcloud config set compute/zone us-central1-b
+
+  gcloud compute instances create "my-vm" \
+  --machine-type "n1-standard-1" \
+  --image-project "debian-cloud" \
+  --image "debian-9-stretch-v20190213" \
+  --subnet "default"
