@@ -26,10 +26,11 @@ Complete of 10-15 selected hands-on labs on Qwiklabs and submitting proof of suc
 
 ```console
   gcloud config set compute/zone us-central1-b
-
   gcloud compute instances create "my-vm" \
   --machine-type "n1-standard-1" \
   --image-project "debian-cloud" \
   --image "debian-9-stretch-v20190213" \
   --subnet "default"
 ```
+
+
