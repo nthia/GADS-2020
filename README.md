@@ -22,8 +22,9 @@ Complete of 10-15 selected hands-on labs on Qwiklabs and submitting proof of suc
 ### The Cloud challenge parts 2:
 “Translation” of 2-3 selected labs from Console instructions to 100% command line instructions.
 
-#### create a VM instance
+#### Create a utility virtual machine
 
+```console
   gcloud config set compute/zone us-central1-b
 
   gcloud compute instances create "my-vm" \
@@ -31,3 +32,4 @@ Complete of 10-15 selected hands-on labs on Qwiklabs and submitting proof of suc
   --image-project "debian-cloud" \
   --image "debian-9-stretch-v20190213" \
   --subnet "default"
+```
